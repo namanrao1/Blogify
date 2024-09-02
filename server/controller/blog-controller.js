@@ -59,7 +59,7 @@ const addBlog = async(req,res,next) =>{
 
     let existingUser;
     try {
-        existingUser = await User.findById(user);
+        existingUser = await User.findById({_id:user});
     } catch (e) {
         return console.log(e);
     }
